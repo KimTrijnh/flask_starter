@@ -23,8 +23,7 @@ db = SQLAlchemy(app, metadata=metadata)
 
 migrate = Migrate(app, db)
 
-from src.models.models import User
-# from src.models.models import *
 
-# from src.components.event.views import event_blueprint
-# app.register_blueprint(event_blueprint, url_prefix="/event")
+# BLUEPRINTS REGISTRATION
+from src.components.user.views import user_blueprint
+app.register_blueprint(user_blueprint, url_prefix="/user")
