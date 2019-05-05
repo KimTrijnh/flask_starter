@@ -1,9 +1,11 @@
 import os
+import psycopg2
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import MetaData
 from config import Config
 from flask_migrate import Migrate
+
 
 convention = {
     "ix": 'ix_%(column_0_label)s',
@@ -21,6 +23,7 @@ db = SQLAlchemy(app, metadata=metadata)
 
 migrate = Migrate(app, db)
 
+from src.models.models import User
 # from src.models.models import *
 
 # from src.components.event.views import event_blueprint

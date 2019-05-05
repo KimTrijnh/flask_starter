@@ -1,7 +1,6 @@
 venv/
 .env
 
-migration/
 
 *.pyc
 __pycache__/
